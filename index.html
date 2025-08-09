@@ -5,131 +5,224 @@
     <title>Symbern Venture Studio | Commercial Excellence</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Symbern Venture Studio accelerates commercial excellence for ambitious ventures.">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #1a2940;
+            --accent: #2e4a7b;
+            --gradient: linear-gradient(90deg, #1a2940 0%, #2e4a7b 100%);
+            --bg: #f7f9fb;
+            --white: #fff;
+            --shadow: 0 4px 24px rgba(30,40,60,0.08);
+        }
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f7f9fb;
+            background: var(--bg);
             color: #222;
         }
-        header {
-            background: #1a2940;
-            color: #fff;
-            padding: 2rem 0 1rem 0;
+        .hero {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 4rem 1rem 3rem 1rem;
             text-align: center;
+            box-shadow: var(--shadow);
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0 0 1rem 0;
             letter-spacing: 2px;
+            font-weight: 700;
         }
-        header p {
-            margin: 0.5rem 0 0 0;
-            font-size: 1.2rem;
-            font-weight: 300;
+        .hero p {
+            font-size: 1.3rem;
+            margin: 0 0 2rem 0;
+            font-weight: 400;
+        }
+        .hero .cta-btn {
+            background: var(--white);
+            color: var(--primary);
+            padding: 0.9rem 2.2rem;
+            border-radius: 30px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(30,40,60,0.12);
+            transition: background 0.2s, color 0.2s;
+        }
+        .hero .cta-btn:hover {
+            background: var(--accent);
+            color: var(--white);
         }
         nav {
-            margin: 1rem 0;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            padding: 0.7rem 0;
             text-align: center;
         }
         nav a {
-            color: #fff;
+            color: var(--primary);
             text-decoration: none;
-            margin: 0 1rem;
+            margin: 0 1.2rem;
             font-weight: 500;
+            font-size: 1.05rem;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--accent);
         }
         .container {
-            max-width: 900px;
-            margin: 2rem auto;
+            max-width: 1000px;
+            margin: 2.5rem auto;
             padding: 0 1rem;
         }
         .section {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(30,40,60,0.07);
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
             margin-bottom: 2rem;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
         }
         .section h2 {
             margin-top: 0;
-            color: #1a2940;
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .section ul {
+            padding-left: 1.2rem;
+        }
+        .section li {
+            margin-bottom: 1rem;
+            font-size: 1.08rem;
+        }
+        .icon {
+            color: var(--accent);
+            font-size: 1.3rem;
+        }
+        .ventures-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .venture-card {
+            background: #f2f5fa;
+            border-radius: 8px;
+            padding: 1.2rem;
+            flex: 1 1 220px;
+            min-width: 220px;
+            box-shadow: 0 2px 8px rgba(30,40,60,0.07);
+            text-align: center;
+        }
+        .venture-card h3 {
+            margin: 0.5rem 0 0.7rem 0;
+            font-size: 1.15rem;
+            color: var(--primary);
+        }
+        .venture-card p {
+            font-size: 0.98rem;
+            color: #444;
+        }
+        .contact-info {
+            font-size: 1.08rem;
+            margin-bottom: 1.2rem;
         }
         .cta {
             text-align: center;
-            margin: 2rem 0;
+            margin: 2rem 0 0 0;
         }
         .cta a {
-            background: #1a2940;
-            color: #fff;
-            padding: 0.75rem 2rem;
-            border-radius: 4px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.8rem 2.2rem;
+            border-radius: 30px;
             text-decoration: none;
             font-size: 1.1rem;
             font-weight: 600;
             transition: background 0.2s;
+            box-shadow: 0 2px 8px rgba(30,40,60,0.12);
         }
         .cta a:hover {
-            background: #2e4a7b;
+            background: var(--accent);
         }
         footer {
-            background: #1a2940;
-            color: #fff;
+            background: var(--primary);
+            color: var(--white);
             text-align: center;
-            padding: 1rem 0;
-            font-size: 0.95rem;
+            padding: 1.2rem 0;
+            font-size: 1rem;
+            margin-top: 2rem;
         }
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.5rem; }
-            .section { padding: 1rem; }
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 2rem; }
+            .section { padding: 1.2rem; }
+            .ventures-list { flex-direction: column; }
         }
     </style>
 </head>
 <body>
-    <header>
+    <nav>
+        <a href="#about"><i class="fa-solid fa-circle-info icon"></i> About</a>
+        <a href="#services"><i class="fa-solid fa-briefcase icon"></i> Services</a>
+        <a href="#ventures"><i class="fa-solid fa-rocket icon"></i> Ventures</a>
+        <a href="#contact"><i class="fa-solid fa-envelope icon"></i> Contact</a>
+    </nav>
+    <section class="hero">
         <h1>Symbern Venture Studio</h1>
-        <p>Accelerating Commercial Excellence</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#ventures">Ventures</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+        <p>Building and scaling ventures with commercial excellence.<br>
+        Partnering with founders to turn bold ideas into thriving businesses.</p>
+        <a class="cta-btn" href="#contact">Let's Connect</a>
+    </section>
     <div class="container">
         <section class="section" id="about">
-            <h2>About Us</h2>
+            <h2><i class="fa-solid fa-circle-info icon"></i> About Us</h2>
             <p>
-                Symbern is a venture studio dedicated to building, scaling, and supporting businesses that set new standards in commercial excellence. 
-                We partner with founders and teams to turn bold ideas into thriving ventures, leveraging deep expertise in strategy, technology, and go-to-market execution.
+                Symbern is a venture studio dedicated to launching, scaling, and supporting businesses that set new standards in commercial excellence.
+                We work hands-on with founders and teams, leveraging deep expertise in strategy, technology, and go-to-market execution.
             </p>
         </section>
         <section class="section" id="services">
-            <h2>Our Services</h2>
+            <h2><i class="fa-solid fa-briefcase icon"></i> Our Services</h2>
             <ul>
                 <li><strong>Venture Building:</strong> From concept to launch, we co-create and accelerate new businesses.</li>
-                <li><strong>Commercial Strategy:</strong> We design and implement winning go-to-market and sales strategies.</li>
+                <li><strong>Commercial Strategy:</strong> Designing and implementing winning go-to-market and sales strategies.</li>
                 <li><strong>Growth Enablement:</strong> Data-driven marketing, sales, and operational support for scaling ventures.</li>
                 <li><strong>Advisory:</strong> Hands-on guidance for founders and leadership teams.</li>
             </ul>
         </section>
         <section class="section" id="ventures">
-            <h2>Our Ventures</h2>
-            <p>
-                We work with ambitious founders and teams across B2B, technology, and commercial sectors. 
-                <br>
-                <em>Interested in partnering or learning more? Reach out below.</em>
-            </p>
+            <h2><i class="fa-solid fa-rocket icon"></i> Our Ventures</h2>
+            <div class="ventures-list">
+                <div class="venture-card">
+                    <i class="fa-solid fa-building icon"></i>
+                    <h3>B2B SaaS</h3>
+                    <p>Innovative platforms driving efficiency and growth for commercial teams.</p>
+                </div>
+                <div class="venture-card">
+                    <i class="fa-solid fa-chart-line icon"></i>
+                    <h3>Tech-Enabled Services</h3>
+                    <p>Modernizing service delivery with technology and data-driven insights.</p>
+                </div>
+                <div class="venture-card">
+                    <i class="fa-solid fa-lightbulb icon"></i>
+                    <h3>New Initiatives</h3>
+                    <p>Partnering with founders to launch bold new ventures in commercial sectors.</p>
+                </div>
+            </div>
         </section>
         <section class="section" id="contact">
-            <h2>Contact</h2>
-            <p>
+            <h2><i class="fa-solid fa-envelope icon"></i> Contact</h2>
+            <div class="contact-info">
                 Ready to accelerate your venture? Let's connect.<br>
                 <strong>Email:</strong> <a href="mailto:hello@symbern.com">hello@symbern.com</a>
-            </p>
+            </div>
             <div class="cta">
-                <a href="mailto:hello@symbern.com">Get in Touch</a>
+                <a href="mailto:hello@symbern.com"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
             </div>
         </section>
     </div>
